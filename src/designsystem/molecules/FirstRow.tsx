@@ -1,11 +1,62 @@
-import React from 'react'
+import React from "react";
+import { PeriodicTableType } from "../../types/periodic-table";
+import { BodyLarge, BodyMedium, BodySmall, ElementFilled, SmallTitle } from "../atoms";
 
-type FirstRowProps = {}
+interface FirstRowProps {
+  periodicTableData: PeriodicTableType;
+};
 
-const FirstRow: React.FC<FirstRowProps> = ({}) => {
+const FirstRow: React.FC<FirstRowProps> = ({ periodicTableData }) => {
   return (
-    <div>FirstRow</div>
-  )
-}
+    <div className=" flex">
+      <div className="md:w-1/2 w-full md:grid md:grid-cols-9 ">
+        {/* first element - Hydrogen */}
+        <ElementFilled className="" block={periodicTableData[0]?.block} isFloating={true}>
+          <BodyLarge type="span" className=" text-block-s-800">
+            {periodicTableData[0]?.atomicNumber}
+          </BodyLarge>
+          <SmallTitle className=" text-block-s-800">{periodicTableData[0]?.symbol}</SmallTitle>
+          <BodyMedium type="p" className="text-block-s-800">
+          {periodicTableData[0]?.name}
+          </BodyMedium>
+          <BodySmall type="span" className="text-block-s-800">
+          {periodicTableData[0]?.atomicWeight}
+          </BodySmall>
+        </ElementFilled>
+        <div className=""> </div>
+        <div className=""> </div>
+        <div className=""> </div>
+        <div className=""> </div>
+        <div className=""> </div>
+        <div className=""> </div>
+        <div className=""> </div>
+        <div className=""> </div>
+      </div>
+      <div className="md:w-1/2 w-full md:grid md:grid-cols-9 ">
+        <div className=""> </div>
+        <div className=""> </div>
+        <div className=""> </div>
+        <div className=""> </div>
+        <div className=""> </div>
+        <div className=""> </div>
+        <div className=""> </div>
+        <div className=""> </div>
+        {/* secound element - Helium */}
+        <ElementFilled className="bg-block-s-500">
+          <BodyLarge type="span" className=" text-block-s-800">
+            {periodicTableData[1]?.atomicNumber}
+          </BodyLarge>
+          <SmallTitle className=" text-block-s-800">{periodicTableData[1]?.symbol}</SmallTitle>
+          <BodyMedium type="p" className="text-block-s-800">
+          {periodicTableData[1]?.name}
+          </BodyMedium>
+          <BodySmall type="span" className="text-block-s-800">
+          {periodicTableData[1]?.atomicWeight}
+          </BodySmall>
+        </ElementFilled>
+      </div>
+    </div>
+  );
+};
 
-export default FirstRow
+export default FirstRow;
