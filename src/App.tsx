@@ -1,5 +1,5 @@
 import "./App.css";
-import { PeriodicTable } from "./components";
+import { PeriodicTable, PeriodicTableTest } from "./components";
 
 
 export default function App() {
@@ -7,6 +7,7 @@ export default function App() {
     <div className="">
       {/* <Header /> */}
       <PeriodicTable />
+      {/* <PeriodicTableTest /> */}
       {/* <Footer /> */}
     </div>
   );
