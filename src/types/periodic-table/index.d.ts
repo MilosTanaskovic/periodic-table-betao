@@ -1,8 +1,8 @@
 // Define the possible values for the 'block' property
-export type Block = "s" | "p" | "d" | "f";
+export type BlockType = "s" | "p" | "d" | "f";
 
 // Interface representing a single element in the periodic table
-export interface PeriodicTableElement {
+export interface PeriodicTableElementType {
   name: string;
   atomicNumber: number;
   symbol: string;
@@ -13,4 +13,4 @@ export interface PeriodicTableElement {
 }
 
 // Type representing an array of periodic table elements
-export type PeriodicTable = PeriodicTableElement[];
+export type PeriodicTableType = PeriodicTableElementType[];
