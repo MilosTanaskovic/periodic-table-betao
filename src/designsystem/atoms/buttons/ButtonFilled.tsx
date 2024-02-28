@@ -12,7 +12,7 @@ const ButtonFilled = (props: ButtonFilledProps) => {
     return (
         <button
             type="button"
-            className={`flex flex-col items-center rounded-md shadow-md p-2 ${
+            className={`flex flex-col items-center rounded-md shadow-md p-2 w-[88px] h-[88px] ${
                 isFloating ? "shadow-accent-low" : ""
             } ${className}`}
             onClick={handleBtnClick}
