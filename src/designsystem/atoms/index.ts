@@ -5,5 +5,5 @@ export { default as LargeTitle } from './typography/LargeTitle';
 export { default as BodySmall } from './typography/BodySmall';
 export { default as BodyMedium } from './typography/BodyMedium';
 export { default as BodyLarge } from './typography/BodyLarge';
-// buttons components
+// button components
 export { default as ButtonFilled } from './buttons/ButtonFilled';
