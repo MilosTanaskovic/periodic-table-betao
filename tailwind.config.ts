@@ -17,15 +17,19 @@ export default {
         // Block s scope
         "block-s-200": "#FF9A9A", // hover color
         "block-s-500": "#FBE8E7", // primary collor
+        "block-s-800": "#C4292E", // body collor
         // Block d scope
         "block-d-200": "#9ACDFF", // hover color
         "block-d-500": "#F1E8FB", // primary collor
+        "block-d-800": "#5A3EE3", // body collor
         // Block p scope
         "block-p-200": "#FCFF8D", // hover color
         "block-p-500": "#FDF7E2", // primary collor
+        "block-p-800": "#8C591D", // body collor
         // Block f scope
         "block-f-200": "#9BFF9B", // hover color
         "block-f-500": "#DDF8E9", // primary collor
+        "block-f-800": "#0E2B06", // body collor
 
         dark: {
           100: "#000000",
