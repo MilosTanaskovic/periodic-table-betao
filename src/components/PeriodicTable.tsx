@@ -4,9 +4,11 @@ import { PeriodicTableType } from "../types/periodic-table";
 
 import data from "../data/periodic-table-data.json";
 import {
+    ActinidesRow,
   FifthRow,
   FirstRow,
   FourthRow,
+  LanthanidesRow,
   SecondRow,
   SeventhRow,
   SixthRow,
@@ -30,6 +32,9 @@ const PeriodicTable: React.FC<PeriodicTableProps> = ({}) => {
       <FifthRow periodicTableData={periodicTableData} />
       <SixthRow periodicTableData={periodicTableData} />
       <SeventhRow periodicTableData={periodicTableData} />
+
+      <LanthanidesRow periodicTableData={periodicTableData} />
+      <ActinidesRow periodicTableData={periodicTableData} />
     </section>
   );
 };

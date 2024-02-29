@@ -54,10 +54,23 @@ const SeventhRow: React.FC<SeventhRowProps> = ({ periodicTableData }) => {
           </BodySmall>
         </ElementFilled>
 
-        <ElementFilled className="" block={"d"} isFloating={true}>
+        <ElementFilled
+          className=""
+          block={periodicTableData[88]?.block}
+          isFloating={true}
+        >
+          <BodyLarge type="span" className=" text-block-d-800">
+            {periodicTableData[88]?.atomicNumber}
+          </BodyLarge>
+          <SmallTitle className=" text-block-d-800">
+            {periodicTableData[88]?.symbol}
+          </SmallTitle>
           <BodyMedium type="p" className="text-block-d-800">
-            Actinides
+            {periodicTableData[88]?.name}
           </BodyMedium>
+          <BodySmall type="span" className="text-block-d-800">
+            {periodicTableData[88]?.atomicWeight}
+          </BodySmall>
         </ElementFilled>
 
         <ElementFilled

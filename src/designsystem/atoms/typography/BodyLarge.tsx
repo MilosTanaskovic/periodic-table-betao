@@ -11,7 +11,7 @@ const BodyLarge = (props: BodyLargeProps) => {
   const As = type ? "p" : "span";
 
   return (
-    <As className={`font-roboto font-bold text-[14px] leading-[14px] tracking-normal ${className}`}>
+    <As className={`font-roboto font-bold text-[14px] leading-[14px] tracking-normal self-start ${className}`}>
       {children}
     </As>
   );
