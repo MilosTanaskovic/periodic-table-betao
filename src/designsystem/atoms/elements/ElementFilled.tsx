@@ -4,6 +4,7 @@ import { BlockType } from "../../../types/periodic-table";
 type ElementFilledProps = {
   children: React.ReactNode;
   block?: BlockType;
+  isSelected?: boolean;
   isFloating?: boolean;
   className?: string;
   handleBtnClick?: () => void;
@@ -16,12 +17,25 @@ const backgroundColors = {
   f: "bg-block-f-500",
 };
 
-const ElementFilled = (props: ElementFilledProps) => {
-const { children, block, isFloating, className, handleBtnClick } = props;
+const highlightColors = {
+  s: "bg-block-s-200",
+  p: "bg-block-p-200",
+  d: "bg-block-d-200",
+  f: "bg-block-f-200",
+};
 
-// Determine background color based on block type
-const bgColor = backgroundColors[block as keyof typeof backgroundColors];
-  
+const ElementFilled = (props: ElementFilledProps) => {
+  const { children, block, isSelected, isFloating, className, handleBtnClick } =
+    props;
+
+  // Determine background color based on block type
+  //const bgColor = backgroundColors[block as keyof typeof backgroundColors];
+
+  // Choose highlight color if isSelected is true
+  const bgColor = isSelected
+    ? highlightColors[block as keyof typeof highlightColors]
+    : backgroundColors[block as keyof typeof backgroundColors];
+
   return (
     <button
       type="button"

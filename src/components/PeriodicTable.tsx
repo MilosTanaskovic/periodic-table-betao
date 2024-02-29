@@ -1,10 +1,10 @@
 // PeriodicTable is organism level
-import React from "react";
-import { PeriodicTableType } from "../types/periodic-table";
+import React, { useState } from "react";
+import { BlockType, PeriodicTableType } from "../types/periodic-table";
 
 import data from "../data/periodic-table-data.json";
 import {
-    ActinidesRow,
+  ActinidesRow,
   FifthRow,
   FirstRow,
   FourthRow,
@@ -18,23 +18,64 @@ import {
 type PeriodicTableProps = {};
 
 const PeriodicTable: React.FC<PeriodicTableProps> = ({}) => {
+  const [selectedBlock, setSelectedBlock] = useState<null | BlockType>(null);
   // Use type assertion to check the data against the PeriodicTable type
   const periodicTableData: PeriodicTableType = data as PeriodicTableType;
+
+  const handleElementClick = (blockType: BlockType) => {
+    setSelectedBlock(blockType);
+  };
 
   console.log("data", periodicTableData);
 
   return (
     <section className=" py-4 px-4">
-      <FirstRow periodicTableData={periodicTableData} />
-      <SecondRow periodicTableData={periodicTableData} />
-      <ThirdRow periodicTableData={periodicTableData} />
-      <FourthRow periodicTableData={periodicTableData} />
-      <FifthRow periodicTableData={periodicTableData} />
-      <SixthRow periodicTableData={periodicTableData} />
-      <SeventhRow periodicTableData={periodicTableData} />
+      <FirstRow
+        periodicTableData={periodicTableData}
+        selectedBlock={selectedBlock}
+        onElementClick={handleElementClick}
+      />
+      <SecondRow
+        periodicTableData={periodicTableData}
+        selectedBlock={selectedBlock}
+        onElementClick={handleElementClick}
+      />
+      <ThirdRow
+        periodicTableData={periodicTableData}
+        selectedBlock={selectedBlock}
+        onElementClick={handleElementClick}
+      />
+      <FourthRow
+        periodicTableData={periodicTableData}
+        selectedBlock={selectedBlock}
+        onElementClick={handleElementClick}
+      />
+      <FifthRow
+        periodicTableData={periodicTableData}
+        selectedBlock={selectedBlock}
+        onElementClick={handleElementClick}
+      />
+      <SixthRow
+        periodicTableData={periodicTableData}
+        selectedBlock={selectedBlock}
+        onElementClick={handleElementClick}
+      />
+      <SeventhRow
+        periodicTableData={periodicTableData}
+        selectedBlock={selectedBlock}
+        onElementClick={handleElementClick}
+      />
 
-      <LanthanidesRow periodicTableData={periodicTableData} />
-      <ActinidesRow periodicTableData={periodicTableData} />
+      <LanthanidesRow
+        periodicTableData={periodicTableData}
+        selectedBlock={selectedBlock}
+        onElementClick={handleElementClick}
+      />
+      <ActinidesRow
+        periodicTableData={periodicTableData}
+        selectedBlock={selectedBlock}
+        onElementClick={handleElementClick}
+      />
     </section>
   );
 };
