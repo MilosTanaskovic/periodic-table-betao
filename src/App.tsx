@@ -1,14 +1,19 @@
+import { useState } from "react";
 import "./App.css";
-import { Header, PeriodicTable, PeriodicTableTest } from "./components";
-
+import { Header, PeriodicTable } from "./components";
 
 export default function App() {
+  const [isInverted, setIsInverted] = useState<boolean>(false);
+
+  const handleInvertClick = () => {
+    setIsInverted(!isInverted); // Toggle the isInverted state;
+  };
   return (
     <div className=" flex flex-col gap-24">
       {/* <Header /> */}
-      <Header />
+      <Header onInvertClick={handleInvertClick} />
       {/* Periodic Table */}
-      <PeriodicTable />
+      <PeriodicTable isInverted={isInverted} />
       {/* <PeriodicTableTest /> */}
       {/* <Footer /> */}
     </div>

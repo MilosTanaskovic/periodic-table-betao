@@ -15,9 +15,11 @@ import {
   ThirdRow,
 } from "../designsystem/molecules";
 
-type PeriodicTableProps = {};
+interface PeriodicTableProps {
+  isInverted?: boolean;
+}
 
-const PeriodicTable: React.FC<PeriodicTableProps> = ({}) => {
+const PeriodicTable: React.FC<PeriodicTableProps> = ({ isInverted }) => {
   const [selectedBlock, setSelectedBlock] = useState<null | BlockType>(null);
   // Use type assertion to check the data against the PeriodicTable type
   const periodicTableData: PeriodicTableType = data as PeriodicTableType;
@@ -29,7 +31,9 @@ const PeriodicTable: React.FC<PeriodicTableProps> = ({}) => {
   console.log("data", periodicTableData);
 
   return (
-    <section className=" py-4 px-4">
+    <section
+      className={`py-4 px-4 ${isInverted ? "flex flex-col-reverse" : ""}`}
+    >
       <FirstRow
         periodicTableData={periodicTableData}
         selectedBlock={selectedBlock}
