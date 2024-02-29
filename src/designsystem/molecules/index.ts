@@ -7,5 +7,8 @@ export { default as FifthRow } from './FifthRow';
 export { default as SixthRow } from './SixthRow';
 export { default as SeventhRow } from './SeventhRow';
 
+export { default as LanthanidesRow } from './LanthanidesRow';
+export { default as ActinidesRow } from './ActinidesRow';
+
 // test version
 export { default as PeriodicTableRow } from './PeriodicTableRow';

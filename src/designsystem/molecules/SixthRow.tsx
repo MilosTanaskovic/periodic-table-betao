@@ -54,10 +54,23 @@ const SixthRow: React.FC<SixthRowProps> = ({ periodicTableData }) => {
           </BodySmall>
         </ElementFilled>
 
-        <ElementFilled className="" block={"d"} isFloating={true}>
+        <ElementFilled
+          className=""
+          block={periodicTableData[56]?.block}
+          isFloating={true}
+        >
+          <BodyLarge type="span" className=" text-block-d-800">
+            {periodicTableData[56]?.atomicNumber}
+          </BodyLarge>
+          <SmallTitle className=" text-block-d-800">
+            {periodicTableData[56]?.symbol}
+          </SmallTitle>
           <BodyMedium type="p" className="text-block-d-800">
-            Lanthanides
+            {periodicTableData[56]?.name}
           </BodyMedium>
+          <BodySmall type="span" className="text-block-d-800">
+            {periodicTableData[56]?.atomicWeight}
+          </BodySmall>
         </ElementFilled>
 
         <ElementFilled

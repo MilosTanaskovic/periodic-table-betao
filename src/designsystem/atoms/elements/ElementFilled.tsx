@@ -26,7 +26,7 @@ const bgColor = backgroundColors[block as keyof typeof backgroundColors];
     <button
       type="button"
       className={`flex flex-col items-center rounded-md shadow-md p-2 m-1 ${bgColor} ${
-        isFloating ? "shadow-accent-low" : ""
+        isFloating ? "" : " shadow-light-300"
       } ${className}`}
       onClick={handleBtnClick}
     >
