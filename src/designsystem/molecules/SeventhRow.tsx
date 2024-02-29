@@ -1,5 +1,5 @@
 import React from "react";
-import { PeriodicTableType } from "../../types/periodic-table";
+import { BlockType, PeriodicTableType } from "../../types/periodic-table";
 import {
   BodyLarge,
   BodyMedium,
@@ -10,9 +10,15 @@ import {
 
 interface SeventhRowProps {
   periodicTableData: PeriodicTableType;
+  selectedBlock?: BlockType | null;
+  onElementClick: (blockType: BlockType) => void;
 }
 
-const SeventhRow: React.FC<SeventhRowProps> = ({ periodicTableData }) => {
+const SeventhRow: React.FC<SeventhRowProps> = ({
+  periodicTableData,
+  selectedBlock,
+  onElementClick,
+}) => {
   return (
     <div className=" flex">
       <div className="md:w-1/2 w-full md:grid md:grid-cols-9">
@@ -20,6 +26,8 @@ const SeventhRow: React.FC<SeventhRowProps> = ({ periodicTableData }) => {
           className=""
           block={periodicTableData[86]?.block}
           isFloating={true}
+          isSelected={periodicTableData[86]?.block === selectedBlock}
+          handleBtnClick={() => onElementClick(periodicTableData[86]?.block)}
         >
           <BodyLarge type="span" className=" text-block-s-800">
             {periodicTableData[86]?.atomicNumber}
@@ -39,6 +47,8 @@ const SeventhRow: React.FC<SeventhRowProps> = ({ periodicTableData }) => {
           className=""
           block={periodicTableData[87]?.block}
           isFloating={true}
+          isSelected={periodicTableData[87]?.block === selectedBlock}
+          handleBtnClick={() => onElementClick(periodicTableData[87]?.block)}
         >
           <BodyLarge type="span" className=" text-block-s-800">
             {periodicTableData[87]?.atomicNumber}
@@ -58,6 +68,8 @@ const SeventhRow: React.FC<SeventhRowProps> = ({ periodicTableData }) => {
           className=""
           block={periodicTableData[88]?.block}
           isFloating={true}
+          isSelected={periodicTableData[88]?.block === selectedBlock}
+          handleBtnClick={() => onElementClick(periodicTableData[88]?.block)}
         >
           <BodyLarge type="span" className=" text-block-d-800">
             {periodicTableData[88]?.atomicNumber}
@@ -77,6 +89,8 @@ const SeventhRow: React.FC<SeventhRowProps> = ({ periodicTableData }) => {
           className=""
           block={periodicTableData[103]?.block}
           isFloating={true}
+          isSelected={periodicTableData[103]?.block === selectedBlock}
+          handleBtnClick={() => onElementClick(periodicTableData[103]?.block)}
         >
           <BodyLarge type="span" className=" text-block-d-800">
             {periodicTableData[103]?.atomicNumber}
@@ -96,6 +110,8 @@ const SeventhRow: React.FC<SeventhRowProps> = ({ periodicTableData }) => {
           className=""
           block={periodicTableData[104]?.block}
           isFloating={true}
+          isSelected={periodicTableData[104]?.block === selectedBlock}
+          handleBtnClick={() => onElementClick(periodicTableData[104]?.block)}
         >
           <BodyLarge type="span" className=" text-block-d-800">
             {periodicTableData[104]?.atomicNumber}
@@ -115,6 +131,8 @@ const SeventhRow: React.FC<SeventhRowProps> = ({ periodicTableData }) => {
           className=""
           block={periodicTableData[105]?.block}
           isFloating={true}
+          handleBtnClick={() => onElementClick(periodicTableData[105]?.block)}
+          isSelected={periodicTableData[105]?.block === selectedBlock}
         >
           <BodyLarge type="span" className=" text-block-d-800">
             {periodicTableData[105]?.atomicNumber}
@@ -134,6 +152,8 @@ const SeventhRow: React.FC<SeventhRowProps> = ({ periodicTableData }) => {
           className=""
           block={periodicTableData[106]?.block}
           isFloating={true}
+          handleBtnClick={() => onElementClick(periodicTableData[106]?.block)}
+          isSelected={periodicTableData[106]?.block === selectedBlock}
         >
           <BodyLarge type="span" className=" text-block-d-800">
             {periodicTableData[106]?.atomicNumber}
@@ -153,6 +173,8 @@ const SeventhRow: React.FC<SeventhRowProps> = ({ periodicTableData }) => {
           className=""
           block={periodicTableData[107]?.block}
           isFloating={true}
+          handleBtnClick={() => onElementClick(periodicTableData[107]?.block)}
+          isSelected={periodicTableData[107]?.block === selectedBlock}
         >
           <BodyLarge type="span" className=" text-block-d-800">
             {periodicTableData[107]?.atomicNumber}
@@ -172,6 +194,8 @@ const SeventhRow: React.FC<SeventhRowProps> = ({ periodicTableData }) => {
           className=""
           block={periodicTableData[108]?.block}
           isFloating={true}
+          handleBtnClick={() => onElementClick(periodicTableData[108]?.block)}
+          isSelected={periodicTableData[108]?.block === selectedBlock}
         >
           <BodyLarge type="span" className=" text-block-d-800">
             {periodicTableData[108]?.atomicNumber}
@@ -192,6 +216,8 @@ const SeventhRow: React.FC<SeventhRowProps> = ({ periodicTableData }) => {
           className=""
           block={periodicTableData[109]?.block}
           isFloating={true}
+          handleBtnClick={() => onElementClick(periodicTableData[109]?.block)}
+          isSelected={periodicTableData[109]?.block === selectedBlock}
         >
           <BodyLarge type="span" className=" text-block-d-800">
             {periodicTableData[109]?.atomicNumber}
@@ -211,6 +237,8 @@ const SeventhRow: React.FC<SeventhRowProps> = ({ periodicTableData }) => {
           className=""
           block={periodicTableData[110]?.block}
           isFloating={true}
+          handleBtnClick={() => onElementClick(periodicTableData[110]?.block)}
+          isSelected={periodicTableData[110]?.block === selectedBlock}
         >
           <BodyLarge type="span" className=" text-block-d-800">
             {periodicTableData[110]?.atomicNumber}
@@ -230,6 +258,8 @@ const SeventhRow: React.FC<SeventhRowProps> = ({ periodicTableData }) => {
           className=""
           block={periodicTableData[111]?.block}
           isFloating={true}
+          handleBtnClick={() => onElementClick(periodicTableData[111]?.block)}
+          isSelected={periodicTableData[111]?.block === selectedBlock}
         >
           <BodyLarge type="span" className=" text-block-d-800">
             {periodicTableData[111]?.atomicNumber}
@@ -248,6 +278,8 @@ const SeventhRow: React.FC<SeventhRowProps> = ({ periodicTableData }) => {
           className=""
           block={periodicTableData[112]?.block}
           isFloating={true}
+          handleBtnClick={() => onElementClick(periodicTableData[112]?.block)}
+          isSelected={periodicTableData[112]?.block === selectedBlock}
         >
           <BodyLarge type="span" className=" text-block-p-800">
             {periodicTableData[112]?.atomicNumber}
@@ -267,6 +299,8 @@ const SeventhRow: React.FC<SeventhRowProps> = ({ periodicTableData }) => {
           className=""
           block={periodicTableData[113]?.block}
           isFloating={true}
+          handleBtnClick={() => onElementClick(periodicTableData[113]?.block)}
+          isSelected={periodicTableData[113]?.block === selectedBlock}
         >
           <BodyLarge type="span" className=" text-block-p-800">
             {periodicTableData[113]?.atomicNumber}
@@ -286,6 +320,8 @@ const SeventhRow: React.FC<SeventhRowProps> = ({ periodicTableData }) => {
           className=""
           block={periodicTableData[114]?.block}
           isFloating={true}
+          handleBtnClick={() => onElementClick(periodicTableData[114]?.block)}
+          isSelected={periodicTableData[114]?.block === selectedBlock}
         >
           <BodyLarge type="span" className=" text-block-p-800">
             {periodicTableData[114]?.atomicNumber}
@@ -305,6 +341,8 @@ const SeventhRow: React.FC<SeventhRowProps> = ({ periodicTableData }) => {
           className=""
           block={periodicTableData[115]?.block}
           isFloating={true}
+          handleBtnClick={() => onElementClick(periodicTableData[115]?.block)}
+          isSelected={periodicTableData[115]?.block === selectedBlock}
         >
           <BodyLarge type="span" className=" text-block-p-800">
             {periodicTableData[115]?.atomicNumber}
@@ -324,6 +362,8 @@ const SeventhRow: React.FC<SeventhRowProps> = ({ periodicTableData }) => {
           className=""
           block={periodicTableData[116]?.block}
           isFloating={true}
+          handleBtnClick={() => onElementClick(periodicTableData[116]?.block)}
+          isSelected={periodicTableData[116]?.block === selectedBlock}
         >
           <BodyLarge type="span" className=" text-block-p-800">
             {periodicTableData[116]?.atomicNumber}
@@ -339,7 +379,12 @@ const SeventhRow: React.FC<SeventhRowProps> = ({ periodicTableData }) => {
           </BodySmall>
         </ElementFilled>
 
-        <ElementFilled block={periodicTableData[117].block} isFloating={true}>
+        <ElementFilled
+          block={periodicTableData[117].block}
+          isFloating={true}
+          handleBtnClick={() => onElementClick(periodicTableData[117]?.block)}
+          isSelected={periodicTableData[117]?.block === selectedBlock}
+        >
           <BodyLarge type="span" className=" text-block-p-800">
             {periodicTableData[117]?.atomicNumber}
           </BodyLarge>
