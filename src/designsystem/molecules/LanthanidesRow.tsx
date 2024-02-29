@@ -20,7 +20,7 @@ const LanthanidesRow: React.FC<LanthanidesRowProps> = ({
   onElementClick,
 }) => {
   return (
-    <div className=" flex mt-5">
+    <div className=" flex">
       <div className="md:w-1/2 w-full md:grid md:grid-cols-9">
         <div className=""></div>
         <div className=""></div>
