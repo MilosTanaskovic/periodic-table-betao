@@ -1,95 +1,107 @@
-# Betao Periodic Table Assignment
+Betao Periodic Table Project
+============================
 
-## Introduction
+Welcome to the Betao Periodic Table Project! This application provides a dynamic and interactive exploration of the periodic table, designed to offer both educational insights and an engaging user experience for chemistry enthusiasts and professionals alike.
 
-Welcome to the Betao Periodic Table Assignment. This project aims to create a dynamic and interactive periodic table web application. By following this README, you will get a clear understanding of the project requirements, scope, and development workflow.
+🚀 Getting Started
+------------------
 
-## Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
-Before starting, ensure you have the following installed:
-- Node.js
-- A code editor (e.g., VSCode)
-- Git
+Ensure you have the following tools installed and running on your system:
+
+*   [Node.js](https://nodejs.org/) (v16.x or later)
+*   A modern code editor like Visual Studio Code
+*   [Git](https://git-scm.com/) for version control
 
 ### Installation
 
-1. Clone the repository:
-```bash
-git clone [repository_url]
-```
-2. Navigate to the project directory:
-```bash
-cd periodic-table-assignment
-```
-3. Install dependencies:
-```bash
-npm install
-```
+Follow these simple steps to get your development environment running:
 
-## Project Overview
+1.  **Clone the repository**
+    
+    bashCopy code
+    
+    `git clone [repository_url]`
+    
+2.  **Navigate to the project directory**
+    
+    bashCopy code
+    
+    `cd periodic-table-assignment`
+    
+3.  **Install dependencies**
+    
+    bashCopy code
+    
+    `npm install`
+    
 
-### Steps to Follow
+📖 Project Overview
+-------------------
 
-1. **Read the README file/description**
-   - Understand the requirements.
-   - Break down the description into small chunks/sections.
-2. **Review an Example**
-   - See an example of a periodic table for inspiration and understanding.
-3. **Analyze `periodic-table-data.json`**
-   - Open and analyze the structure of `periodic-table-data.json` to understand the data you'll work with.
-4. **Create Requirements and Scope**
-   - Define the project's requirements and scope before starting the development process.
+The project is structured to facilitate easy development and expansion. Here's what you need to know to dive in:
 
-### Work Steps/Flow (End-to-End Approach)
+### Development Steps
+(- POC - Design - Development - Test - Depoloyment)
 
-1. **Proof-of-Concept (POC)**
-   - Determine the scope of the POC process.
-   - Clearly define criteria for success with use cases.
-   - Choose the best tech stack for this project.
-   - Define all packages/dependencies needed.
-   - Define the MVP (v1) for the project and create a prototype.
-   - Decide on the best architecture/folder structure and design system.
+1.  **Familiarize with the Project**
+    
+    *   Start by reading through the project documentation.
+    *   Analyze the `periodic-table-data.json` to understand the dataset.
+2.  **Design and Prototyping**
+    
+    *   Explore design references like our [Figma UI template](https://www.figma.com/file/kH7LTf6kzVhwtk1SICCApj/Periodic-Table-(Community)).
+    *   Establish a Style Guide based on the chosen design.
+3.  **Development Workflow**
+    
+    *   Break down the project into manageable tasks.
+    *   Utilize React components and TailwindCSS for UI development.
+4.  **Testing and Quality Assurance**
+    
+    *   Write unit and integration tests using Jest and React Testing Library.
+    *   Ensure code quality with ESLint.
+5.  **Deployment**
+    
+    *   Outline a deployment strategy for hosting the application.
 
-2. **UI Development**
-   - Find the right UI for this project. A reference UI can be found [here](https://www.figma.com/file/kH7LTf6kzVhwtk1SICCApj/Periodic-Table-(Community)).
-   - Create and define a Style-Guide (colors, typography) based on the UI.
+👨‍💻 For Developers
+--------------------
 
-3. **Development**
-   - Define and create a Sprint Board (Epic, Feature, PBI, Task).
-   - Setup a style config for the design system/atomic design based on the UI Style-Guide.
-   - Organize and create a folder structure following the atomic approach.
-   - Break down the project into small chunks, defining scopes for Epic, Feature, PBI, and Task.
-   - Translate/transform UI components to React components.
+### Running the Application
 
-4. **Testing**
-   - Implement unit and integration tests to ensure reliability.
+*   **Development Mode**
+    
+    bashCopy code
+    
+    `npm run dev`
+    
+*   **Build for Production**
+    
+    bashCopy code
+    
+    `npm run build`
+    
+*   **Run Tests**
+    
+    bashCopy code
+    
+    `npm run test`
+    
 
-5. **Deployment**
-   - Prepare and execute deployment strategy.
+📚 Documentation
+----------------
 
-## Contribution Guidelines
+*   **Component Documentation**: Find detailed documentation on components and utilities in the `docs` folder.
 
-- Ensure code is well-commented and follows the project's coding conventions.
-- Write tests for new features and bug fixes.
-- Submit pull requests for review before merging.
+🤝 Contributing
+---------------
 
-## License
+We welcome contributions! Please read our [Contribution Guidelines](CONTRIBUTING.md) for more information on how to report issues, contribute code, and improve documentation.
 
-This project is licensed under the [MIT License](LICENSE).
+📄 License
+----------
 
-## Acknowledgments
-
-- Figma Community for the UI reference.
-- Betao AB for providing the opportunity to work on this interesting project.
-
----
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
