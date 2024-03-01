@@ -19,7 +19,6 @@ const SecondRow: React.FC<SecondRowProps> = ({
   selectedBlock,
   onElementClick,
 }) => {
-  console.log("color", periodicTableData[5]?.block);
   return (
     <div className=" flex gap-1 md:gap-2">
       <div className="md:w-1/2 w-full md:grid md:grid-cols-9 gap-2">
