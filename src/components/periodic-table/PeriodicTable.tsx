@@ -1,8 +1,8 @@
 // PeriodicTable is organism level
 import React, { useState } from "react";
-import { BlockType, PeriodicTableType } from "../types/periodic-table";
+import { BlockType, PeriodicTableType } from "../../types/periodic-table";
 
-import data from "../data/periodic-table-data.json";
+import data from "../../data/periodic-table-data.json";
 import {
   ActinidesRow,
   FifthRow,
@@ -13,8 +13,8 @@ import {
   SeventhRow,
   SixthRow,
   ThirdRow,
-} from "../designsystem/molecules";
-import { MediumTitle } from "../designsystem/atoms";
+} from "../../designsystem/molecules";
+import { MediumTitle } from "../../designsystem/atoms";
 
 interface PeriodicTableProps {
   isInverted?: boolean;
@@ -29,11 +29,11 @@ const PeriodicTable: React.FC<PeriodicTableProps> = ({ isInverted }) => {
     setSelectedBlock(blockType);
   };
 
-  console.log("data", periodicTableData);
-
   return (
     <section
       id="periodic-table"
+      data-testid="periodic-table"
+      data-inverted={isInverted?.toString() || "false"}
       className={`py-4 px-4 ${isInverted ? "flex flex-col-reverse" : ""}`}
     >
       <div id="period-1">
