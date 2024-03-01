@@ -39,7 +39,7 @@ const ElementFilled = (props: ElementFilledProps) => {
   return (
     <button
       type="button"
-      className={`flex flex-col items-center rounded-md shadow-md p-2 m-1 ${bgColor} ${
+      className={`flex flex-col items-center w-full rounded-md shadow-md p-2 my-1 ${bgColor} ${
         isFloating ? "" : " shadow-light-300"
       } ${className}`}
       onClick={handleBtnClick}

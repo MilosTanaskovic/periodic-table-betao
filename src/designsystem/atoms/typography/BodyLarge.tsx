@@ -6,12 +6,13 @@ type BodyLargeProps = {
   className?: string;
 };
 
+// atomicNumber
 const BodyLarge = (props: BodyLargeProps) => {
-  const { children, type = "p", className } = props;
-  const As = type ? "p" : "span";
+  const { children, type = "span", className } = props;
+  const As = type ? "span" : "p";
 
   return (
-    <As className={`font-roboto font-bold text-[14px] leading-[14px] tracking-normal self-start ${className}`}>
+    <As className={`font-roboto font-bold text-[18px] md:text-[12px] xl:text-[14px] leading-[14px] tracking-normal self-start ${className}`}>
       {children}
     </As>
   );

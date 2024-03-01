@@ -8,7 +8,7 @@ type MediumTitleProps = {
 const MediumTitle = (props: MediumTitleProps) => {
   const { children, className } = props;
   return (
-    <h2 className={`font-bold text-2xl text-black ${className}`}>
+    <h2 className={`font-semibold text-xl text-black py-2 ${className}`}>
       {children}
     </h2>
   );

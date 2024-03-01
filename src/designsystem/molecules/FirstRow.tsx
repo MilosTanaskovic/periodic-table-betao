@@ -20,8 +20,8 @@ const FirstRow: React.FC<FirstRowProps> = ({
   onElementClick,
 }) => {
   return (
-    <div className=" flex">
-      <div className="md:w-1/2 w-full md:grid md:grid-cols-9 ">
+    <div className=" flex gap-1 md:gap-2">
+      <div className="md:w-1/2 w-full md:grid md:grid-cols-9 gap-2">
         {/* first element - Hydrogen */}
         <ElementFilled
           className=""
@@ -52,7 +52,7 @@ const FirstRow: React.FC<FirstRowProps> = ({
         <div className=""> </div>
         <div className=""> </div>
       </div>
-      <div className="md:w-1/2 w-full md:grid md:grid-cols-9 ">
+      <div className="md:w-1/2 w-full md:grid md:grid-cols-9 gap-2">
         <div className=""> </div>
         <div className=""> </div>
         <div className=""> </div>

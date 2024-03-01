@@ -8,7 +8,7 @@ type LargeTitleProps = {
 const LargeTitle = (props: LargeTitleProps) => {
     const { children, className } = props;
   return (
-    <h1 className={`font-bold text-4xl ${className}`}>
+    <h1 className={`font-bold text-2xl md:text-4xl ${className}`}>
         {children}
     </h1>
   )
