@@ -21,8 +21,8 @@ const SecondRow: React.FC<SecondRowProps> = ({
 }) => {
   console.log("color", periodicTableData[5]?.block);
   return (
-    <div className=" flex">
-      <div className="md:w-1/2 w-full md:grid md:grid-cols-9">
+    <div className=" flex gap-1 md:gap-2">
+      <div className="md:w-1/2 w-full md:grid md:grid-cols-9 gap-2">
         {/* secound row */}
         <ElementFilled
           className=""
@@ -72,7 +72,7 @@ const SecondRow: React.FC<SecondRowProps> = ({
         <div className=""> </div>
         <div className=""> </div>
       </div>
-      <div className="md:w-1/2 w-full md:grid md:grid-cols-9 ">
+      <div className="md:w-1/2 w-full md:grid md:grid-cols-9 gap-2">
         <div className=""> </div>
         <div className=""> </div>
         <div className=""> </div>

@@ -20,8 +20,8 @@ const ThirdRow: React.FC<ThirdRowProps> = ({
   onElementClick,
 }) => {
   return (
-    <div className=" flex">
-      <div className="md:w-1/2 w-full md:grid md:grid-cols-9">
+    <div className=" flex gap-1 md:gap-2">
+      <div className="md:w-1/2 w-full md:grid md:grid-cols-9 gap-2">
         <ElementFilled
           className=""
           block={periodicTableData[10]?.block}
@@ -70,7 +70,7 @@ const ThirdRow: React.FC<ThirdRowProps> = ({
         <div className=""> </div>
         <div className=""> </div>
       </div>
-      <div className="md:w-1/2 w-full md:grid md:grid-cols-9">
+      <div className="md:w-1/2 w-full md:grid md:grid-cols-9 gap-2">
         <div className=""> </div>
         <div className=""> </div>
         <div className=""> </div>

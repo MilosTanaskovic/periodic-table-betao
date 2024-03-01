@@ -20,8 +20,8 @@ const FourthRow: React.FC<FourthRowProps> = ({
   onElementClick,
 }) => {
   return (
-    <div className=" flex">
-      <div className="md:w-1/2 w-full md:grid md:grid-cols-9">
+    <div className=" flex gap-1 md:gap-2">
+      <div className="md:w-1/2 w-full md:grid md:grid-cols-9 gap-2">
         <ElementFilled
           className=""
           block={periodicTableData[18]?.block}
@@ -210,7 +210,7 @@ const FourthRow: React.FC<FourthRowProps> = ({
           </BodySmall>
         </ElementFilled>
       </div>
-      <div className="md:w-1/2 w-full md:grid md:grid-cols-9">
+      <div className="md:w-1/2 w-full md:grid md:grid-cols-9 gap-2">
         <ElementFilled
           className=""
           block={periodicTableData[27]?.block}
