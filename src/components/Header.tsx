@@ -3,10 +3,11 @@ import { ButtonOutline, LargeTitle } from "../designsystem/atoms";
 import BateoLogo from "../assets/bateo-logo.png";
 
 interface HeaderProps {
+    isInverted: boolean;
   onInvertClick: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ onInvertClick }) => {
+const Header: React.FC<HeaderProps> = ({ isInverted, onInvertClick }) => {
   return (
     <header className=" flex justify-between items-center gap-4 w-full h-20 px-4">
       {/* Logo */}
@@ -14,7 +15,7 @@ const Header: React.FC<HeaderProps> = ({ onInvertClick }) => {
       {/* Title */}
       <LargeTitle>Periodic Table Of Elements</LargeTitle>
       {/* invert button */}
-      <ButtonOutline handleBtnClick={onInvertClick}>Invert</ButtonOutline>
+      <ButtonOutline handleBtnClick={onInvertClick}>{!isInverted ? "Invert": "Revert"}</ButtonOutline>
     </header>
   );
 };
